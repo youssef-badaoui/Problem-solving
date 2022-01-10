@@ -4,20 +4,15 @@ using namespace std;
 int main()
 {
 	int col, row, n;
-	n = 0;
-	col = 1;
-	row = 1;
+	n = 0; col = 0; row = 0;
 	while(n != 1)
 	{
 		cin >> n;
 		col++;
-		if(col == 5)
-		{
+		if(col == 6)
+			col = 1;
+		if(col == 1)
 			row++;
-			col = 0;
-		}
 	}
-	cout << col<< endl;
-	cout << row<< endl;
-	cout << 2-(max(col,5) - min(col,5)) + 2-(max(row ,5) - min(row,5)) << endl;
+	cout << abs(3- col) + abs(3-row) << endl;
 }
