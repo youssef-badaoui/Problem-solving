@@ -14,8 +14,14 @@ int main()
 		cin >> str[i];
 		j = i;
 		while(--j >= 0)
+		{
 			if(str[i] == str[j])
+			{
 				res++;
+				break;
+			}
+		}
+				
 		i++;
 	}
 	cout << res;
